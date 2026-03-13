@@ -1,0 +1,10 @@
+services:
+  auth-svc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: auth-svc
+    ports:
+      - "50052:50052"
+    volumes:
+      - ./cfg.yaml:/app/cfg.yaml:ro
